@@ -17,4 +17,10 @@
 	.message-container h1 {
 		font-size: 2rem;
 	}
+
+	@media (max-width: 600px) {
+		.message-container h1 {
+			font-size: 1.5rem;
+		}
+	}
 </style>

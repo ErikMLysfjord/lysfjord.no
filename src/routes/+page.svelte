@@ -51,4 +51,10 @@
 		font-size: 2rem;
 		margin: 0;
 	}
+
+	@media (max-width: 600px) {
+		.outer-container h1 {
+			font-size: 1.5rem;
+		}
+	}
 </style>

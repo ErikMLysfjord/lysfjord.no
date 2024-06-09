@@ -49,6 +49,7 @@
 
 	.content {
 		padding-top: 4rem;
+		padding-bottom: 2rem;
 	}
 
 	.book-list {
@@ -57,5 +58,19 @@
 	}
 	.book-list li {
 		margin: 0.5rem 0;
+	}
+
+	@media (max-width: 600px) {
+		.book-section {
+			width: 90%;
+		}
+
+		.content {
+			padding-top: 1rem;
+		}
+
+		.book-list {
+			margin: 0rem;
+		}
 	}
 </style>

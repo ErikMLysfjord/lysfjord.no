@@ -17,4 +17,10 @@
 	.error-container h1 {
 		font-size: 2rem;
 	}
+
+	@media (max-width: 600px) {
+		.error-container h1 {
+			font-size: 1rem;
+		}
+	}
 </style>
