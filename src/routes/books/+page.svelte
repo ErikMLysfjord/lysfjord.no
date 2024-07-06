@@ -7,10 +7,12 @@
 	<div class="content">
 		<h1>What am I currently reading?</h1>
 		<ul class="book-list">
-			<li>🐈‍⬛ Kafka on the shore - Haruki Murakami</li>
+			<li>📸 The Picture of Dorian Gray - Oscar Wilde</li>
 		</ul>
 		<h2>2024</h2>
 		<ul class="book-list">
+			<li>👶Child of God - Cormac McCarthy</li>
+			<li>🐈‍⬛ Kafka on the shore - Haruki Murakami</li>
 			<li>⚡️ Young Zaphod Plays it Safe - Douglas Adams</li>
 			<li>🥱 Mostly Harmless - Douglas Adams</li>
 			<li>🐬 So Long and Thanks for All the Fish - Douglas Adams</li>
