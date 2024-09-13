@@ -7,10 +7,13 @@
 	<div class="content">
 		<h1>What am I currently reading?</h1>
 		<ul class="book-list">
-			<li>📸 The Picture of Dorian Gray - Oscar Wilde</li>
+			<li>🗽11.22.63 - Stephen King</li>
 		</ul>
 		<h2>2024</h2>
 		<ul class="book-list">
+			<li>🤓Dumhet, idioti, og dumme idioter - Lars Fr. Svendsen</li>
+			<li>📸 The Picture of Dorian Gray - Oscar Wilde</li>
+			<li>🏡Cabin Porn: Inspiration for Your Quiet Place Somewhere - Zach Klein</li>
 			<li>👶Child of God - Cormac McCarthy</li>
 			<li>🐈‍⬛ Kafka on the shore - Haruki Murakami</li>
 			<li>⚡️ Young Zaphod Plays it Safe - Douglas Adams</li>
