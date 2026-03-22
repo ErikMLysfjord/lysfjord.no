@@ -2,8 +2,32 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.svg" type="image/svg+xml" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Open Graph -->
+		<meta property="og:site_name" content="Erik Menkin Lysfjord" />
+		<meta property="og:locale" content="en_US" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:image" content="https://lysfjord.no/avatar.jpeg" />
+
+		<!-- JSON-LD Person schema -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Erik Menkin Lysfjord",
+				"url": "https://lysfjord.no",
+				"sameAs": [
+					"https://github.com/ErikMLysfjord",
+					"https://www.linkedin.com/in/erik-menkin-lysfjord/"
+				],
+				"jobTitle": "Software Developer"
+			}
+		</script>
+
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
