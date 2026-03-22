@@ -177,7 +177,7 @@
 
 <div class="page">
 	<section class="book-section">
-		<h1>Reading</h1>
+		<h1>Reading list</h1>
 
 		<div class="group">
 			<h2 class="group-label">Currently reading</h2>
@@ -240,11 +240,12 @@
 	}
 
 	.book-section {
-		width: min(600px, 90%);
+		width: min(660px, 90%);
 		padding: 3rem 0 4rem;
 	}
 
 	h1 {
+		font-family: 'Lora Variable', serif;
 		font-size: 1.6rem;
 		color: #e0e0e8;
 		margin: 0 0 2.5rem;

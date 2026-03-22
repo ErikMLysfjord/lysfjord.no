@@ -1,13 +1,22 @@
 <svelte:head>
 	<title>Erik Menkin Lysfjord</title>
-	<meta name="description" content="Personal website of Erik Menkin Lysfjord, a software developer based in Norway." />
+	<meta
+		name="description"
+		content="Personal website of Erik Menkin Lysfjord, a software developer based in Norway."
+	/>
 	<link rel="canonical" href="https://lysfjord.no" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://lysfjord.no" />
 	<meta property="og:title" content="Erik Menkin Lysfjord" />
-	<meta property="og:description" content="Personal website of Erik Menkin Lysfjord, a software developer based in Norway." />
+	<meta
+		property="og:description"
+		content="Personal website of Erik Menkin Lysfjord, a software developer based in Norway."
+	/>
 	<meta name="twitter:title" content="Erik Menkin Lysfjord" />
-	<meta name="twitter:description" content="Personal website of Erik Menkin Lysfjord, a software developer based in Norway." />
+	<meta
+		name="twitter:description"
+		content="Personal website of Erik Menkin Lysfjord, a software developer based in Norway."
+	/>
 </svelte:head>
 
 <div class="outer-container">
@@ -25,6 +34,9 @@
 </div>
 
 <style>
+	h1 {
+		font-family: 'Lora Variable', serif;
+	}
 	.outer-container {
 		display: flex;
 		gap: 1.5rem;
@@ -67,7 +79,9 @@
 		padding: 0.2rem 0.1rem;
 		text-decoration: none;
 		border-bottom: 1px solid #ffcc4855;
-		transition: color 0.15s, border-color 0.15s;
+		transition:
+			color 0.15s,
+			border-color 0.15s;
 	}
 
 	a:hover {

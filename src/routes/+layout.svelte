@@ -1,5 +1,6 @@
 <script>
 	import '@fontsource-variable/inter';
+	import '@fontsource-variable/lora';
 	import Nav from './Nav.svelte';
 	import { dev } from '$app/environment';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';

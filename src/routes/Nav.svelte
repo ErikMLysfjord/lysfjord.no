@@ -3,66 +3,60 @@
 </script>
 
 <nav class="navbar">
-	<div class="nav-item" class:active={$page.url.pathname === '/'}>
-		<a class:active-link={$page.url.pathname === '/'} href="/">
-			<span class="label">Home</span>
-		</a>
-	</div>
-	<div class="links-right">
-		<div class="nav-item" class:active={$page.url.pathname === '/books'}>
-			<a class:active-link={$page.url.pathname === '/books'} href="/books">
-				<span class="label">Books</span>
-			</a>
-		</div>
-		<div class="nav-item" class:active={$page.url.pathname === '/resume'}>
-			<a class:active-link={$page.url.pathname === '/resume'} href="/resume">
-				<span class="label">Resume</span>
-			</a>
-		</div>
+	<a class="wordmark" href="/">Erik Menkin Lysfjord</a>
+
+	<div class="links">
+		<a class="nav-link" class:active={$page.url.pathname === '/books'} href="/books">Books</a>
+		<a class="nav-link" class:active={$page.url.pathname === '/resume'} href="/resume">Resume</a>
 	</div>
 </nav>
 
 <style>
-	a {
-		color: #6b6b75;
-		text-decoration: none;
-		font-size: 0.9rem;
-		letter-spacing: 0.01em;
-		transition: color 0.15s;
-	}
-
-	a:hover {
-		color: #a9a9b3;
-	}
-
 	.navbar {
 		display: flex;
-		margin: 0 7.5%;
 		justify-content: space-between;
 		align-items: center;
-		padding: 1.5rem 1rem;
+		padding: 1.25rem 7.5%;
+		border-bottom: 1px solid #252627;
 	}
 
-	.nav-item {
-		padding: 0.25rem 0.25rem 0.1rem;
-		border-bottom: 2px solid transparent;
-		transition: border-color 0.15s;
+	.wordmark {
+		color: #c0c0c8;
+		text-decoration: none;
+		transition: color 0.15s;
+
+		font-family: 'Lora Variable', serif;
+		font-style: italic;
+		font-size: 1rem;
 	}
 
-	.active {
-		border-bottom-color: #ffcc48;
+	.wordmark:hover {
+		color: #e0e0e8;
 	}
 
-	.active-link {
-		color: #d0d0d8;
-	}
-
-	.links-right {
+	.links {
 		display: flex;
 		gap: 1.75rem;
 	}
 
-	a:focus {
+	.nav-link {
+		font-size: 0.85rem;
+		color: #555;
+		text-decoration: none;
+		letter-spacing: 0.01em;
+		transition: color 0.15s;
+	}
+
+	.nav-link:hover {
+		color: #a9a9b3;
+	}
+
+	.nav-link.active {
+		color: #ffcc48;
+	}
+
+	.wordmark:focus,
+	.nav-link:focus {
 		outline: 2px solid #ffcc48;
 		border-radius: 1px;
 		outline-offset: 4px;
@@ -70,8 +64,7 @@
 
 	@media (max-width: 600px) {
 		.navbar {
-			margin: 0 4%;
-			padding: 1.2rem 0.5rem;
+			padding: 1.1rem 5%;
 		}
 	}
 </style>
