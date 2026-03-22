@@ -1,4 +1,5 @@
 <script>
+	import '@fontsource-variable/inter';
 	import Nav from './Nav.svelte';
 </script>
 
