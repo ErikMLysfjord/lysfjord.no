@@ -1,38 +1,58 @@
-# create-svelte
+# lysfjord.no
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Personal website of Erik Menkin Lysfjord. Built with SvelteKit, content managed via Sanity, deployed on Vercel.
 
-## Creating a project
+## Stack
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Framework**: SvelteKit (Svelte 4)
+- **CMS**: Sanity
+- **Fonts**: Inter Variable, Lora Variable
+- **Analytics**: Vercel Analytics
+- **Deployment**: Vercel
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Pages
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+- **Home** — intro with links to GitHub, LinkedIn, and email
+- **Books** — reading list fetched from Sanity, grouped by year with star ratings and notes
+- **Resume** — work experience, education, and volunteering fetched from Sanity
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Install dependencies:
 
 ```bash
-npm run dev
+pnpm install
+```
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+Copy `.env.example` to `.env` and fill in the values:
+
+```bash
+cp .env.example .env
+```
+
+Required environment variables:
+
+```
+SANITY_PROJECT_ID=
+SANITY_DATASET=
+SANITY_API_TOKEN=
+```
+
+Start the dev server:
+
+```bash
+pnpm dev
 ```
 
 ## Building
 
-To create a production version of your app:
-
 ```bash
-npm run build
+pnpm build
+pnpm preview
 ```
 
-You can preview the production build with `npm run preview`.
+## Type checking
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+```bash
+pnpm check
+```
