@@ -1,10 +1,10 @@
-<script>
-	export let company;
-	export let role;
-	export let period;
-	export let location = '';
-	export let bullets = [];
-	export let tags = [];
+<script lang="ts">
+	export let company: string;
+	export let role: string;
+	export let period: string;
+	export let location: string = '';
+	export let bullets: string[] = [];
+	export let tags: string[] = [];
 </script>
 
 <div class="entry">

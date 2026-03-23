@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import '@fontsource-variable/inter';
 	import '@fontsource-variable/lora';
 	import Nav from './Nav.svelte';
@@ -6,6 +6,8 @@
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 
 	injectAnalytics({ mode: dev ? 'development' : 'production' });
+
+	export let params: Record<string, string> = {};
 </script>
 
 <Nav />
