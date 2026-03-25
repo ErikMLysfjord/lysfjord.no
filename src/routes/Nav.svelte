@@ -41,7 +41,7 @@
 
 	.nav-link {
 		font-size: 0.85rem;
-		color: #555;
+		color: #888;
 		text-decoration: none;
 		letter-spacing: 0.01em;
 		transition: color 0.15s;
