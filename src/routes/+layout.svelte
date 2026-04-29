@@ -2,10 +2,23 @@
 	import '@fontsource-variable/inter';
 	import '@fontsource-variable/lora';
 	import Nav from './Nav.svelte';
-	import { dev } from '$app/environment';
-	import { injectAnalytics } from '@vercel/analytics/sveltekit';
+	import { browser } from '$app/environment';
+	import { onMount } from 'svelte';
 
-	injectAnalytics({ mode: dev ? 'development' : 'production' });
+	onMount(() => {
+		if (browser) {
+			import('aws-rum-web').then(({ AwsRum }) => {
+				new AwsRum('a8c96268-0853-4e66-a55a-d2808e72342a', '1.0.0', 'eu-north-1', {
+					sessionSampleRate: 1,
+					endpoint: 'https://dataplane.rum.eu-north-1.amazonaws.com',
+					telemetries: ['performance', 'errors', 'http'],
+					allowCookies: false,
+					enableXRay: false,
+					signing: false
+				});
+			});
+		}
+	});
 
 	export let params: Record<string, string> = {};
 </script>

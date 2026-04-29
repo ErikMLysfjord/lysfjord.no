@@ -1,14 +1,14 @@
 # lysfjord.no
 
-Personal website of Erik Menkin Lysfjord. Built with SvelteKit, content managed via Sanity, deployed on Vercel.
+Personal website of Erik Menkin Lysfjord. Built with SvelteKit, content managed via Sanity, deployed on AWS.
 
 ## Stack
 
 - **Framework**: SvelteKit (Svelte 4)
 - **CMS**: Sanity
 - **Fonts**: Inter Variable, Lora Variable
-- **Analytics**: Vercel Analytics
-- **Deployment**: Vercel
+- **Analytics**: AWS CloudWatch RUM
+- **Deployment**: AWS (SST)
 
 ## Pages
 
@@ -35,7 +35,6 @@ Required environment variables:
 ```
 SANITY_PROJECT_ID=
 SANITY_DATASET=
-SANITY_API_TOKEN=
 ```
 
 Start the dev server:
