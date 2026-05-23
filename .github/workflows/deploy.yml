@@ -8,8 +8,14 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      deployments: write
     steps:
       - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
 
       - uses: pnpm/action-setup@v4
         with:
@@ -22,8 +28,45 @@ jobs:
 
       - run: pnpm install
 
-      - run: pnpm sst deploy --stage production
+      - name: Create GitHub deployment
+        id: deployment
+        run: |
+          DEPLOYMENT_ID=$(gh api repos/${{ github.repository }}/deployments \
+            --method POST \
+            --field ref=${{ github.sha }} \
+            --field environment=production \
+            --field auto_merge=false \
+            --field required_contexts='[]' \
+            --jq '.id')
+          echo "id=$DEPLOYMENT_ID" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy to AWS
+        id: sst
+        run: pnpm sst deploy --stage production
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: eu-north-1
+
+      - name: Update deployment status (success)
+        if: success()
+        run: |
+          gh api repos/${{ github.repository }}/deployments/${{ steps.deployment.outputs.id }}/statuses \
+            --method POST \
+            --field state=success \
+            --field environment_url=https://lysfjord.no \
+            --field log_url=https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update deployment status (failure)
+        if: failure()
+        run: |
+          gh api repos/${{ github.repository }}/deployments/${{ steps.deployment.outputs.id }}/statuses \
+            --method POST \
+            --field state=failure \
+            --field log_url=https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

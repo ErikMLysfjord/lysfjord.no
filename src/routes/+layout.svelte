@@ -41,6 +41,7 @@
 		background-color: #1e1f20;
 		color: #a9a9b3;
 		height: 100%;
+		overflow-x: hidden;
 		-webkit-font-smoothing: antialiased;
 	}
 

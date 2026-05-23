@@ -29,6 +29,16 @@
 		</script>
 
 		%sveltekit.head%
+
+		<!-- critical layout CSS so the avatar-wrapper reserves space before the component stylesheet loads -->
+		<style>
+			.outer-container { display: flex; flex-direction: row; align-items: center; justify-content: center; }
+			.avatar-wrapper   { width: 360px; height: 390px; flex-shrink: 0; }
+			@media (max-width: 640px) {
+				.outer-container { flex-direction: column-reverse; }
+				.avatar-wrapper  { width: 260px; height: 280px; }
+			}
+		</style>
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
