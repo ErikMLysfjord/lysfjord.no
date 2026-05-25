@@ -41,7 +41,7 @@
 <style>
 	.entry {
 		padding: 1.1rem 0;
-		border-bottom: 1px solid #2e2f30;
+		border-bottom: 1px solid var(--border);
 	}
 
 	.entry:last-child {
@@ -71,23 +71,23 @@
 
 	.company {
 		font-size: 0.95rem;
-		color: #e0e0e8;
+		color: var(--heading);
 	}
 
 	.role {
 		font-size: 0.82rem;
-		color: #6b6b75;
+		color: var(--muted);
 	}
 
 	.period {
 		font-size: 0.82rem;
-		color: #6b6b75;
+		color: var(--muted);
 		white-space: nowrap;
 	}
 
 	.location {
 		font-size: 0.78rem;
-		color: #4a4a52;
+		color: var(--faint);
 		white-space: nowrap;
 	}
 
@@ -102,7 +102,7 @@
 
 	.bullets li {
 		font-size: 0.85rem;
-		color: #888;
+		color: var(--faint);
 		line-height: 1.5;
 	}
 
@@ -115,8 +115,8 @@
 
 	.tag {
 		font-size: 0.72rem;
-		color: #5a5a64;
-		border: 1px solid #2e2f30;
+		color: var(--muted);
+		border: 1px solid var(--border);
 		border-radius: 3px;
 		padding: 0.15rem 0.45rem;
 	}

@@ -109,7 +109,7 @@
 	h1 {
 		font-family: 'Lora Variable', serif;
 		font-size: 1.6rem;
-		color: #e0e0e8;
+		color: var(--heading);
 		margin: 0 0 2.5rem;
 		font-weight: 600;
 		letter-spacing: -0.02em;
@@ -123,17 +123,17 @@
 		font-size: 0.75rem;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
-		color: #555;
+		color: var(--muted);
 		margin: 0 0 0.25rem;
 		font-weight: 500;
 	}
 
 	.list {
-		border-top: 1px solid #2e2f30;
+		border-top: 1px solid var(--border);
 	}
 
 	.additional {
-		border-top: 1px solid #2e2f30;
+		border-top: 1px solid var(--border);
 		padding-top: 1rem;
 		display: flex;
 		flex-direction: column;
@@ -144,11 +144,11 @@
 		display: flex;
 		gap: 1.5rem;
 		font-size: 0.85rem;
-		color: #888;
+		color: var(--faint);
 	}
 
 	.additional-label {
-		color: #555;
+		color: var(--muted);
 		min-width: 80px;
 	}
 </style>

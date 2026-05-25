@@ -10,14 +10,14 @@
 		<svg class="star" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 			<defs>
 				<linearGradient id="half-{uid}-{i}">
-					<stop offset="{fill * 100}%" stop-color="#ffcc48" />
+					<stop offset="{fill * 100}%" stop-color="var(--accent-star, var(--accent))" />
 					<stop offset="{fill * 100}%" stop-color="transparent" />
 				</linearGradient>
 			</defs>
 			<polygon
 				points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"
 				fill="url(#half-{uid}-{i})"
-				stroke="#ffcc48"
+				stroke="var(--accent-star, var(--accent))"
 				stroke-width="1"
 				stroke-linejoin="round"
 			/>

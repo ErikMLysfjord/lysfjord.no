@@ -38,11 +38,11 @@
 
 <style>
 	.book-entry {
-		border-bottom: 1px solid #2e2f30;
+		border-bottom: 1px solid var(--border);
 	}
 
 	.book-entry:has(:focus-visible) {
-		outline: 2px solid #ffcc48;
+		outline: 2px solid var(--accent);
 		border-radius: 2px;
 		outline-offset: 2px;
 	}
@@ -58,7 +58,7 @@
 		width: 100%;
 		background: none;
 		border: none;
-		color: #a9a9b3;
+		color: var(--text);
 		padding: 0.6rem 0;
 		cursor: default;
 		text-align: left;
@@ -70,7 +70,7 @@
 	}
 
 	.entry-header[aria-expanded]:hover .title {
-		color: #c8c8d0;
+		color: var(--heading);
 	}
 
 	.title-author {
@@ -82,22 +82,22 @@
 
 	.title {
 		font-size: 0.95rem;
-		color: #c8c8d0;
+		color: var(--text);
 		transition: color 0.15s;
 	}
 
 	.author {
 		font-size: 0.8rem;
-		color: #6b6b75;
+		color: var(--muted);
 	}
 
 	.current .title {
-		color: #ffcc48;
+		color: var(--accent);
 	}
 
 	.chevron {
 		font-size: 1.2rem;
-		color: #555;
+		color: var(--muted);
 		transition: transform 0.2s;
 		line-height: 1;
 	}
@@ -113,9 +113,9 @@
 	.notes {
 		padding: 0.4rem 0 0.75rem 0.5rem;
 		font-size: 0.85rem;
-		color: #888;
+		color: var(--faint);
 		line-height: 1.6;
-		border-left: 2px solid #2e2f30;
+		border-left: 2px solid var(--border);
 	}
 
 	.notes p {

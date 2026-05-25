@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 </script>
 
@@ -17,21 +17,20 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 1.25rem 7.5%;
-		border-bottom: 1px solid #252627;
+		border-bottom: 1px solid var(--border);
 	}
 
 	.wordmark {
-		color: #c0c0c8;
+		color: var(--nav-wordmark);
 		text-decoration: none;
 		transition: color 0.15s;
-
 		font-family: 'Lora Variable', serif;
 		font-style: italic;
 		font-size: 1rem;
 	}
 
 	.wordmark:hover {
-		color: #e0e0e8;
+		color: var(--heading);
 	}
 
 	.links {
@@ -41,23 +40,25 @@
 
 	.nav-link {
 		font-size: 0.85rem;
-		color: #888;
+		color: var(--muted);
 		text-decoration: none;
 		letter-spacing: 0.01em;
 		transition: color 0.15s;
 	}
 
 	.nav-link:hover {
-		color: #a9a9b3;
+		color: var(--text);
 	}
 
 	.nav-link.active {
-		color: #ffcc48;
+		color: var(--accent);
+		border-bottom: 1.5px solid var(--accent);
+		padding-bottom: 1px;
 	}
 
 	.wordmark:focus,
 	.nav-link:focus {
-		outline: 2px solid #ffcc48;
+		outline: 2px solid var(--accent);
 		border-radius: 1px;
 		outline-offset: 4px;
 	}

@@ -65,7 +65,7 @@
 		font-family: 'Lora Variable', serif;
 		font-size: 2.4rem;
 		margin: 0;
-		color: #e0e0e8;
+		color: var(--heading);
 		font-weight: 600;
 		letter-spacing: -0.02em;
 	}
@@ -73,7 +73,7 @@
 	.tagline {
 		margin: 0;
 		font-size: 0.95rem;
-		color: #5a5a64;
+		color: var(--muted);
 	}
 
 	.link-container {
@@ -101,7 +101,7 @@
 		width: 330px;
 		height: 330px;
 		flex-shrink: 0;
-		background: #ffcc48;
+		background: var(--blob);
 		border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
 		animation: morph 18s ease-in-out infinite;
 		overflow: hidden;
@@ -134,28 +134,28 @@
 	/* ── links ── */
 
 	a {
-		color: #c8c8d2;
+		color: var(--text);
 		padding: 0.2rem 0.1rem;
 		text-decoration: none;
-		border-bottom: 1px solid #ffcc4855;
+		border-bottom: 1px solid var(--border);
 		transition:
 			color 0.15s,
 			border-color 0.15s;
 	}
 
 	a:hover {
-		color: #ffcc48;
-		border-color: #ffcc48;
+		color: var(--accent);
+		border-color: var(--accent);
 	}
 
 	a:focus {
-		outline: 2px solid #ffcc48;
+		outline: 2px solid var(--accent);
 		border-radius: 2px;
 		outline-offset: 3px;
 	}
 
 	.sep {
-		color: #3a3a40;
+		color: var(--border);
 		font-size: 1rem;
 		user-select: none;
 	}

@@ -77,7 +77,7 @@
 	h1 {
 		font-family: 'Lora Variable', serif;
 		font-size: 1.6rem;
-		color: #e0e0e8;
+		color: var(--heading);
 		margin: 0 0 2.5rem;
 		font-weight: 600;
 		letter-spacing: -0.02em;
@@ -91,12 +91,12 @@
 		font-size: 0.75rem;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
-		color: #555;
+		color: var(--muted);
 		margin: 0 0 0.75rem;
 		font-weight: 500;
 	}
 
 	.list {
-		border-top: 1px solid #2e2f30;
+		border-top: 1px solid var(--border);
 	}
 </style>
