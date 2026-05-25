@@ -13,10 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
       - uses: pnpm/action-setup@v4
         with:
           version: 9
@@ -33,11 +29,11 @@ jobs:
         run: |
           DEPLOYMENT_ID=$(gh api repos/${{ github.repository }}/deployments \
             --method POST \
-            --field ref=${{ github.sha }} \
-            --field environment=production \
-            --field auto_merge=false \
-            --field required_contexts='[]' \
-            --jq '.id')
+            --input - \
+            --jq '.id' <<EOF
+          {"ref":"${{ github.sha }}","environment":"production","auto_merge":false,"required_contexts":[]}
+          EOF
+          )
           echo "id=$DEPLOYMENT_ID" >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -52,6 +48,7 @@ jobs:
 
       - name: Update deployment status (success)
         if: success()
+        continue-on-error: true
         run: |
           gh api repos/${{ github.repository }}/deployments/${{ steps.deployment.outputs.id }}/statuses \
             --method POST \
@@ -63,6 +60,7 @@ jobs:
 
       - name: Update deployment status (failure)
         if: failure()
+        continue-on-error: true
         run: |
           gh api repos/${{ github.repository }}/deployments/${{ steps.deployment.outputs.id }}/statuses \
             --method POST \
