@@ -2,26 +2,13 @@
 	import '@fontsource-variable/inter';
 	import '@fontsource-variable/lora';
 	import Nav from './Nav.svelte';
-	import { browser } from '$app/environment';
-	import { onMount } from 'svelte';
-
-	onMount(() => {
-		if (browser) {
-			import('aws-rum-web').then(({ AwsRum }) => {
-				new AwsRum('a8c96268-0853-4e66-a55a-d2808e72342a', '1.0.0', 'eu-north-1', {
-					sessionSampleRate: 1,
-					endpoint: 'https://dataplane.rum.eu-north-1.amazonaws.com',
-					telemetries: ['performance', 'errors', 'http'],
-					allowCookies: false,
-					enableXRay: false,
-					signing: false
-				});
-			});
-		}
-	});
 
 	export let params: Record<string, string> = {};
 </script>
+
+<svelte:head>
+	<script defer src="https://umami-analytics-mu-eight.vercel.app/script.js" data-website-id="95494686-2de3-4a1b-a034-75c4383c3bd8"></script>
+</svelte:head>
 
 <Nav />
 

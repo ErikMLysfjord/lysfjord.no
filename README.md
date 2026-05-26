@@ -7,7 +7,7 @@ Personal website of Erik Menkin Lysfjord. Built with SvelteKit, content managed 
 - **Framework**: SvelteKit (Svelte 4)
 - **CMS**: Sanity
 - **Fonts**: Inter Variable, Lora Variable
-- **Analytics**: AWS CloudWatch RUM
+- **Analytics**: Umami (self-hosted on Vercel)
 - **Deployment**: AWS (SST)
 
 ## Pages

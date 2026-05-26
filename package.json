@@ -36,7 +36,6 @@
 		"@fontsource-variable/inter": "^5.2.8",
 		"@fontsource-variable/lora": "^5.2.8",
 		"@sanity/client": "^7.20.0",
-		"aws-rum-web": "^2.1.0",
 		"svelte-kit-sst": "2.43.5"
 	}
 }
