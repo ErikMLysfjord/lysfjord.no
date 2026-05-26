@@ -12,6 +12,8 @@
 		property="og:description"
 		content="Personal website of Erik Menkin Lysfjord, a software developer based in Norway."
 	/>
+	<meta property="og:image" content="https://lysfjord.no/preview.png" />
+	<meta name="twitter:image" content="https://lysfjord.no/preview.png" />
 	<meta name="twitter:title" content="Erik Menkin Lysfjord" />
 	<meta
 		name="twitter:description"
